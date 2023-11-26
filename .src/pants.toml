@@ -1,0 +1,23 @@
+# Copyright 2020 Pants project contributors.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+[GLOBAL]
+pants_version = "2.8.0"
+backend_packages.add = [
+  "pants.backend.python",
+]
+
+[anonymous-telemetry]
+enabled = true
+repo_id = "3B1D361B-E9F1-49A8-B761-03DCC41FD58E"
+
+[source]
+# The Python source root is the repo root. See https://www.pantsbuild.org/docs/source-roots.
+root_patterns = ["/"]
+
+[python]
+interpreter_constraints = ["<3.10.*"]
+
+# REQUIRED for pants_version >= 2.17.0
+# [python-infer]
+# use_rust_parser = true
